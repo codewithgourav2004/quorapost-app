@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        // let nums = [12, 345, 2, 6, 7896]
+
+        // let arr = []
+        // let odd = 0
+        // let even = 0
+        // for (const el of nums) {
+        //     let k = el.toString()
+        //     if (k.length % 2 == 0) {
+        //         odd++
+        //         console.log(true)
+        //     } else {
+        //         even++
+        //     }
+        //     arr.push(k)
+        //     // console.log(k.length)
+        // }
+        // console.log(even)
+
+
+        // let nums = [12, 345, 2, 6, 7896]
+        // var findNumbers = function (nums) {
+        //     let odd = 0
+        //     for (const el of nums) {
+        //         let k = el.toString()
+        //         if (k.length % 2 == 0) {
+        //             odd++
+        //         }
+        //     }
+        //     return odd
+        // };
+
+        // console.log(findNumbers(nums))
+
+
+
+        // let arr = [10, 20, 5, 6, 8]
+        // let k = arr.find((el) => {
+        //     return el > 5
+        // })
+
+        // let img = fetch("https://dog.ceo/api/breeds/image/random")
+        // .then(res => res.json())
+        // .then(data => console.log(data))
+        // .catch(err => console.error(err));
+
+        // img
+        //     .then((res) => {
+        //         return res.json()
+        //     })
+        //     .then((data) => {
+        //         console.log(data.message)
+        //     })
+
+
+        // var message = 10;
+        // // console.log(message)
+
+        // function message() {
+        //     return 'show'
+        // }
+        // // var message = 20
+        // console.log(message());
+
+
+
+
+        // function twosum(num, target) {
+        //     const map = new Map()
+        //     for (let i = 0; i < num.length; i++) {
+        //         let complement = target - num[i]
+        //         if (map.has(complement)) {
+        //             return [map.get(complement), i]
+        //         }
+        //         map.set(num[i], i)
+        //     }
+        //     return []
+
+        // }
+
+        // console.log(twosum([2, 7, 11, 15], 9));
+
+
+
+        // let s = [2, 7, 11, 15]
+        // const map = new Map(s)
+
+        {
+            var a = 1;
+            let b = 2;
+            const c = 3;
+          
+        }
+  console.log(a, b, c)
+
+
+
+
+        // let num = [2, 9, 7, 15]
+        // let sum = 9
+
+
+        // let arr =[[1,2,3,,4],[5,6,7,8,9],[11,12,13,14]]
+
+
+
+        // for (let i = 0; i < num.length; i++) {
+        //     console.log(`outer ${num[i]}`)
+        //     for (let j = 0; j < num.length; j++) {
+        //         console.log(`inner ${num[j]}`)
+
+        //     }
+
+        // }
+
+
+        let num = [2, 9, 7, 15]
+        let sum = 9
+        let newarr = []
+
+        for (let i = 0; i < num.length; i++) {
+            console.log(`outer ${num[i]}`)
+            for (let j = 0; j < num.length; j++) {
+                // console.log(num[j])
+                let total = num[i] + num[j]
+                // console.log(`total= ${total}`)
+                if (total == 9) {
+                    newarr.push(num[i])
+                }
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
