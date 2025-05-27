@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post Details</title>
+  <style>
+    /* General page style */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Card container */
+    .container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      width: 90%;
+      text-align: left;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    textarea {
+      width: 100%;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      resize: vertical;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #00b894;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #019875;
+      transform: scale(1.05);
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Post Details</h1>
+
+    <% if (m) { %>
+      <p><strong>ID:</strong> <%= m.id %></p>
+      <p><strong>Title:</strong> <%= m.name %></p>
+      <p><strong>Content:</strong> <%= m.content %></p>
+
+      <h2>Update this Post</h2>
+      <form action="/post/<%= m.id %>?_method=PATCH" method="POST">
+        <textarea name="content" id="content" rows="10" cols="30"><%= m.content %></textarea><br>
+        <button type="submit">Submit</button>
+      </form>
+    <% } else { %>
+      <p>Post not found</p>
+    <% } %>
+  </div>
+</body>
+
+</html>

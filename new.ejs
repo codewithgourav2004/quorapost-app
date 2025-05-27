@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Post</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2980b9, #8e44ad);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        /* Input fields styling */
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+        }
+
+        input[type="text"]::placeholder, textarea::placeholder {
+            color: #aaa;
+        }
+
+        /* Button Styling */
+        button {
+            background-color: #27ae60;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #2ecc71;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Create New Post</h1>
+        <form action="/post" method="post">
+            <input type="text" name="name" placeholder="Enter Title" required>
+            <textarea name="content" rows="8" placeholder="Write your content here..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

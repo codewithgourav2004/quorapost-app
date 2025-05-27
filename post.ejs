@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <h1>Quora Post</h1>
+
+  <% data.forEach(post => { %>
+    <div>
+      <h2>@<%= post.name %></h2>
+      <p><%= post.content %></p>
+
+      <a href="/post/<%= post.id %>">
+        <button>Show More</button>
+      </a>
+
+      <form action="/post/<%= post.id %>?_method=DELETE" method="POST" style="display:inline;">
+        <button type="submit" onclick="return confirm('Are you sure you want to delete this post?')">
+          Delete
+        </button>
+      </form>
+    </div>
+  <% }) %>
+
+  <p>
+    <!-- <a href="/post/new"><button>Create new Post</button></a> -->
+    <a href="/signup"><button>sign Up</button></a>
+    <a href="/signin">Already have an account? Sign In</a>
+  </p>
+</body>
+
+</html>
